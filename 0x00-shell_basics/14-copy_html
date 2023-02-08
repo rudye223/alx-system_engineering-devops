@@ -1,15 +1,2 @@
 #!/bin/bash
-for file in *.html
-do
-  target_path="../$file"
-  if [ -f "$target_path" ]
-  then
-    if [ "$file" -nt "$target_path" ]
-    then
-      # Copy the file to the parent directory
-      cp "$file" "../$file"
-    fi
-  else
-    cp "$file" "../$file"
-  fi
-done
+for f in *.html; do cp -u "$f" ../"$f"; done
