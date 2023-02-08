@@ -1,0 +1,1 @@
+ls -a | tr '\n' ',' | sort -k 1,1V | sed 's/,$//'
