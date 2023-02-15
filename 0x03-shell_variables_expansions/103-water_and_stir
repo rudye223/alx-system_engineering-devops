@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(echo "ibase=water; $WATER" | bc) + $(echo "ibase=stir; $STIR" | bc) | bc | xargs printf "%X\n"
+echo $((WATER%$water_base+STIR%$stir_base)) | xargs printf "%X\n"
