@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -la | awk '{ if (NF > 8) { if ($1 ~ /^d/) printf "%s/,", $9; else printf "%s,", $9 } }' | sort -k 1,1V | sed 's/,$//'
